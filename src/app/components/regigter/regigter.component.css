@@ -1,0 +1,44 @@
+.form-container {
+    width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid grey;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-input {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(139, 139, 139, 0.242);
+    color: #000;
+}
+
+.form-input input {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    padding: 10px;
+    margin: 10px;
+    width: 120px;
+    height: 40px;
+}
+
+.form-button button {
+    border: none;
+    background: rgb(199, 202, 200);
+    color: #fff;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
