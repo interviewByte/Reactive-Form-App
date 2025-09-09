@@ -17,6 +17,21 @@
       </select>
     </div>
     <div>
+      <label>
+        <input type="radio" formControlName="gender" value="male" /> Male
+      </label>
+      <label>
+        <input type="radio" formControlName="gender" value="female" /> Female
+      </label>
+      <label>
+        <input type="radio" formControlName="gender" value="other" /> Other
+      </label>
+    </div>
+    <div>
+      <label for="policy">Accept Policy:</label>
+      <input type="checkbox" id="policy" formControlName="policy" />
+    </div>
+    <div>
       <button type="submit">Submit</button>
     </div>
   </form>

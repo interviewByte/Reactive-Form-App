@@ -65,6 +65,8 @@ export class SelectFormComponent implements OnInit {
   myform = new FormGroup({
     country: new FormControl(''),
     state: new FormControl(''),
+    gender: new FormControl(''),
+    policy: new FormControl(false),
   });
   ngOnInit(): void {
     this.myform.get('country')?.valueChanges.subscribe((countryName) => {
