@@ -8,6 +8,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { HttpClientModule } from '@angular/common/http';
 import { TodosComponent } from './components/todos/todos.component';
 import { RegigterComponent } from './components/regigter/regigter.component';
+import { SelectFormComponent } from './components/select-form/select-form.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RegigterComponent } from './components/regigter/regigter.component';
     ProductListComponent,
     TodosComponent,
     RegigterComponent,
+    SelectFormComponent,
   ],
   imports: [
     BrowserModule,
