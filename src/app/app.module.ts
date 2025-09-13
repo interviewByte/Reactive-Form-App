@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodosComponent } from './components/todos/todos.component';
 import { RegigterComponent } from './components/regigter/regigter.component';
 import { SelectFormComponent } from './components/select-form/select-form.component';
+import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SelectFormComponent } from './components/select-form/select-form.compon
     TodosComponent,
     RegigterComponent,
     SelectFormComponent,
+    DynamicFormComponent,
   ],
   imports: [
     BrowserModule,
