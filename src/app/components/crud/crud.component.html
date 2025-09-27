@@ -1,0 +1,65 @@
+<div style="width: 400px; height: 400px; margin: 0 auto; padding: 12px">
+  <div>
+    <form [formGroup]="myform" (ngSubmit)="handelSubmit()">
+      <div style="margin: 10px">
+        <input
+          type="text"
+          name=""
+          id=""
+          formControlName="name"
+          placeholder="Enter Name"
+          style="padding: 10px"
+        />
+      </div>
+      <div style="margin: 10px">
+        <input
+          type="email"
+          name=""
+          id=""
+          formControlName="email"
+          placeholder="Enter Email"
+          style="padding: 10px"
+        />
+      </div>
+      <div style="margin: 10px">
+        <input
+          type="password"
+          name=""
+          id=""
+          formControlName="password"
+          placeholder="Enter Password"
+          style="padding: 10px"
+        />
+      </div>
+      <div style="margin: 10px">
+        <input
+          type="password"
+          name=""
+          id=""
+          formControlName="confirmPassword"
+          placeholder="Enter ConfirmPassword"
+          style="padding: 10px"
+        />
+      </div>
+      <div
+        style="
+          margin: 0 auto;
+          width: 150px;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+        "
+      >
+        <button type="submit" style="padding: 10px">Sumit</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let user of users">
+        <p>{{ user.name }}</p>
+        <p>{{ user.email }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

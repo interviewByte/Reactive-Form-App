@@ -11,13 +11,7 @@ export interface countryName {
   styleUrls: ['./select-form.component.css'],
 })
 export class SelectFormComponent implements OnInit {
-  country: countryName[] = [
-    { id: 1, country: 'India' },
-    { id: 2, country: 'USA' },
-    { id: 3, country: 'Canada' },
-    { id: 4, country: 'Australia' },
-    { id: 5, country: 'Germany' },
-  ];
+  country: string[] = ['India', 'USA', 'Canada', 'Australia', 'Germany'];
   stateData = {
     India: [
       'Uttar Pradesh',
@@ -79,12 +73,12 @@ export class SelectFormComponent implements OnInit {
   });
   ngOnInit(): void {
     this.myform.get('country')?.valueChanges.subscribe((countryName) => {
-      let countryID = this.country.filter(
-        (item) => item.country === countryName
-      )[0].id;
-      console.log(countryID);
       // this.states = this.stateData[countryName as keyof typeof this.stateData];
-      // this.myform.get('state')?.setValue('');
+      this.states = countryName
+        ? this.stateData[countryName as keyof typeof this.stateData]
+        : [];
+      // this.states = countryName ? this.stateData[countryName as string] : [];
+      this.myform.get('state')?.setValue('');
     });
   }
   handleSubmit() {

@@ -5,6 +5,10 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { RegigterComponent } from './components/regigter/regigter.component';
 import { SelectFormComponent } from './components/select-form/select-form.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
+import { CrudComponent } from './components/crud/crud.component';
+import { TableDataComponent } from './components/table-data/table-data.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 
 const routes: Routes = [
   { path: '', component: TodosComponent },
@@ -12,6 +16,10 @@ const routes: Routes = [
   { path: 'register', component: RegigterComponent },
   { path: 'select', component: SelectFormComponent },
   { path: 'dynamic-form', component: DynamicFormComponent },
+  { path: 'crud-operation', component: CrudComponent },
+  { path: 'table', component: TableDataComponent },
+  { path: 'parent', component: ParentComponent },
+  { path: 'child', component: ChildComponent },
   {
     path: 'customers',
     loadChildren: () =>

@@ -3,11 +3,8 @@
     <div>
       <label for="country">Select Country:</label>
       <select name="" id="country" formControlName="country">
-        <option
-          *ngFor="let countryName of country"
-          [value]="countryName.country"
-        >
-          {{ countryName?.country }}
+        <option *ngFor="let countryName of country" [value]="countryName">
+          {{ countryName }}
         </option>
       </select>
     </div>
