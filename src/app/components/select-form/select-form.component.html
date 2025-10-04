@@ -1,0 +1,41 @@
+<div>
+  <form [formGroup]="myform" (ngSubmit)="handleSubmit()">
+    <div>
+      <label for="country">Select Country:</label>
+      <select name="" id="country" formControlName="country">
+        <option
+          *ngFor="let countryName of country"
+          [value]="countryName.country"
+        >
+          {{ countryName?.country }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <label for="country">Select State:</label>
+      <select name="" id="country" formControlName="state">
+        <option *ngFor="let state of states" [value]="state">
+          {{ state }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>
+        <input type="radio" formControlName="gender" value="male" /> Male
+      </label>
+      <label>
+        <input type="radio" formControlName="gender" value="female" /> Female
+      </label>
+      <label>
+        <input type="radio" formControlName="gender" value="other" /> Other
+      </label>
+    </div>
+    <div>
+      <label for="policy">Accept Policy:</label>
+      <input type="checkbox" id="policy" formControlName="policy" />
+    </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>

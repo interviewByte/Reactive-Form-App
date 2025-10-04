@@ -1,0 +1,10 @@
+<div>
+  <h2>Dynamic Form:</h2>
+  <form [formGroup]="dynamicForm" (ngSubmit)="handleSubmit()">
+    <div *ngFor="let field of dynamicFormData">
+      <label for="">{{ field.key }}</label>
+      <input [type]="field.type" [formControlName]="field.key" />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
