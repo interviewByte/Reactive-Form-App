@@ -13,6 +13,13 @@ import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.com
 import { AddDelFormComponent } from './components/add-del-form/add-del-form.component';
 import { RequestInterceptor } from './request.interceptor';
 import { InitService } from './services/init.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppNavComponent } from './components/app-nav/app-nav.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 function initFactory(initService: InitService) {
   return () => initService.init();
@@ -27,6 +34,7 @@ function initFactory(initService: InitService) {
     SelectFormComponent,
     DynamicFormComponent,
     AddDelFormComponent,
+    AppNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +42,12 @@ function initFactory(initService: InitService) {
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [
     {

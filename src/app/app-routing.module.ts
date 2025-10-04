@@ -13,12 +13,12 @@ const routes: Routes = [
   { path: 'select', component: SelectFormComponent },
   { path: 'dynamic-form', component: DynamicFormComponent },
   {
-    path: 'customers',
+    path: 'customers/:customer_id',
     loadChildren: () =>
       import('./customers/customers.module').then((m) => m.CustomersModule),
   },
   {
-    path: 'orders',
+    path: 'orders/:order_id',
     loadChildren: () =>
       import('./orders/orders.module').then((m) => m.OrdersModule),
   },
