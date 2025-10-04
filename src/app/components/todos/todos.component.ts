@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ProductsService } from 'src/app/services/products.service';
 
 export interface TodoItem {
   id: number;
@@ -10,10 +12,21 @@ export interface TodoItem {
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.css'],
 })
-export class TodosComponent {
+export class TodosComponent implements OnInit {
   todiList: TodoItem[] = [];
   newTask: string = '';
-
+  subscription!: Subscription;
+  constructor(public service: ProductsService) {}
+  ngOnInit(): void {
+    this.subscription = this.service.getProducts().subscribe({
+      next: (res) => {
+        console.log('res:', res);
+      },
+      error: (err) => {
+        console.log('error:', err);
+      },
+    });
+  }
   addTask(): void {
     if (this.newTask.trim() !== '') {
       const newTodoItem: TodoItem = {
